@@ -45,6 +45,9 @@ public class NovaEmpresaServlet extends HttpServlet {
 		Banco banco = new Banco();
 		banco.adiciona(empresa);
 		
+		request.setAttribute("empresa", empresa.getNome());
+		response.sendRedirect("listaEmpresas");
+		
 		/* Movido para novaEmpresaCriada.jsp
 		 * PrintWriter out = response.getWriter(); 
 		 * out.println("<html><body> Empresa "+ nomeEmpresa + " cadastrada com sucesso!</body></html>");
@@ -52,9 +55,11 @@ public class NovaEmpresaServlet extends HttpServlet {
 		
 		//Chamar o JSP
 		//HttpServletRequest através do método getRequestDispatcher().
-		RequestDispatcher rd = request.getRequestDispatcher("/novaEmpresaCriada.jsp");
-		request.setAttribute("empresa", empresa.getNome());
-		rd.forward(request, response);
+		/*
+		 * RequestDispatcher rd = request.getRequestDispatcher("/listaEmpresas");
+		 * request.setAttribute("empresa", empresa.getNome()); 
+		 * rd.forward(request, response);
+		 */
 		
 		
 	}
