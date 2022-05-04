@@ -28,7 +28,6 @@ public class NovaEmpresa {
 		} catch (ParseException e) {
 			throw new ServletException(e);
 		}
-
 		
 		Empresa empresa = new Empresa();
 		empresa.setNome(nomeEmpresa);
