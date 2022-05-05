@@ -11,24 +11,14 @@ public class Banco {
 	private static Integer chaveSequencial = 1;
 	
 	static {
-//		Empresa empresa = new Empresa();
-//		empresa.setId(chaveSequencial++);
-//		empresa.setNome("Alura");
-//		Empresa empresa2 = new Empresa();
-//		empresa2.setId(chaveSequencial++);
-//		empresa2.setNome("Caelum");
-//		lista.add(empresa);
-//		lista.add(empresa2);
-		
-		
-		//List<Empresa> empresas = new ArrayList<>();
-		
-		for(int i=0; i< 400000; i++) {
-			Empresa empresa = new Empresa();
-			empresa.setNome("xpto");
-			empresa.setId(chaveSequencial++);
-			lista.add(empresa);
-		}
+		Empresa empresa = new Empresa();
+		empresa.setId(chaveSequencial++);
+		empresa.setNome("Alura");
+		Empresa empresa2 = new Empresa();
+		empresa2.setId(chaveSequencial++);
+		empresa2.setNome("Caelum");
+		lista.add(empresa);
+		lista.add(empresa2);
 		
 		Usuario u1 = new Usuario();
 		u1.setLogin("alisson");

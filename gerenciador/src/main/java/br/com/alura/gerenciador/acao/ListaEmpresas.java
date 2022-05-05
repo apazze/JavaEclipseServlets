@@ -17,19 +17,10 @@ public class ListaEmpresas implements Acao{
 	
 	public String executa(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-		long antes = System.currentTimeMillis();
-		request.setAttribute("inicio", antes);
-		
 		System.out.println("listando empresa");
 		Banco banco = new Banco();
 		List<Empresa> lista = banco.getEmpresas();
 		request.setAttribute("empresas", lista);
-		
-		long depois = System.currentTimeMillis();
-		request.setAttribute("fim", depois);
-		
-		
-		System.out.println("Tempo de execução: [ " + (depois - antes) + " ]");
 		
 		return "forward:listaEmpresas.jsp";
 	}
