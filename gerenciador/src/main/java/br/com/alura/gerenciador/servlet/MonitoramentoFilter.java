@@ -4,6 +4,7 @@ import java.io.IOException;
 
 import javax.servlet.Filter;
 import javax.servlet.FilterChain;
+import javax.servlet.FilterConfig;
 import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
@@ -11,6 +12,12 @@ import javax.servlet.annotation.WebFilter;
 
 //@WebFilter("/entrada")
 public class MonitoramentoFilter implements Filter {
+	
+	@Override
+	public void init(FilterConfig config) throws ServletException {}
+	
+	@Override
+	public void destroy() {}
 	
 	//Filtros são executados antes do controller e após, similar a uma porta giratória, posso continuar a execução ou barrar
 
