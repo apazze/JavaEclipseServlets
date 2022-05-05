@@ -34,6 +34,11 @@
 			</li>
 		</c:forEach>
 	</ul>
-
+	
+	<br />
+	<br />
+	<br />
+	Inicio execução ${inicio} <br />
+	Fim execução ${fim}
 </body>
 </html>
