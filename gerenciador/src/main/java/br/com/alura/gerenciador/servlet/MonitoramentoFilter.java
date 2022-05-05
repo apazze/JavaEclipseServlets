@@ -9,7 +9,7 @@ import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import javax.servlet.annotation.WebFilter;
 
-@WebFilter("/entrada")
+//@WebFilter("/entrada")
 public class MonitoramentoFilter implements Filter {
 	
 	//Filtros são executados antes do controller e após, similar a uma porta giratória, posso continuar a execução ou barrar
@@ -18,6 +18,7 @@ public class MonitoramentoFilter implements Filter {
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
 			throws IOException, ServletException {
 		
+		System.out.println("MonitoramentoFilter");
 		long antes = System.currentTimeMillis();
 		
 		String acao = request.getParameter("acao");
